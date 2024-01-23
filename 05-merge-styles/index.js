@@ -5,10 +5,6 @@ const stylesFolder = path.resolve(__dirname, 'styles');
 const bundleFile = path.resolve(__dirname, 'project-dist', 'bundle.css')
 const output = fs.createWriteStream(bundleFile);
 
-fs.truncate(bundleFile, (err) => {
-  if (err) console.log(err);
-})
-
 fs.readdir(stylesFolder, { withFileTypes: true }, (err, files) => {
   if (err) console.log(err);
 
